@@ -1,12 +1,12 @@
-### Laravel jquery ajax tutorial
-# Create new laravel project
+# Laravel jquery ajax tutorial
+### Create new laravel project
 ```shell
 composer create-project --prefer-dist laravel/laravel laravel_ajax_crud
 ```
 
-# Create database and name it laravel_ajax_crud
+### Create database and name it laravel_ajax_crud
 
-# Setup your .env file with the following:
+### Setup your .env file with the following:
 ```php
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -16,12 +16,12 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-# Create migration 
+### Create migration 
 ```shell
 php artisan make:migration create_todos_table
 ```
 
-# After creating your todos migration, update your todos migration with the following code:
+### After creating your todos migration, update your todos migration with the following code:
 ```php
 <?php
 
@@ -58,17 +58,17 @@ return new class extends Migration
 
 ```
 
-# Migrate your migration
+### Migrate your migration
 ```shell
 php artisan migrate
 ```
 
-# Create your todos model using the below command
+### Create your todos model using the below command
 ```shell
 php artisan make:model Todo
 ```
 
-# After creating your mode, Update your Todo.php model in app/Models with the following code
+### After creating your mode, Update your Todo.php model in app/Models with the following code
 ```php
 <?php
 
@@ -87,11 +87,11 @@ class Todo extends Model
 }
 ```
 
-# Create controller
+### Create controller
 ```shell
 php artisan make:controller TodosController
 ```
-# After creating TodosController, update your app/Http/Controllers/TodosController.php with the following code:
+### After creating TodosController, update your app/Http/Controllers/TodosController.php with the following code:
 ```php
 <?php
 
@@ -144,7 +144,7 @@ class TodosController extends Controller
 }
 ```
 
-# Update your routes/web.php file with the following code
+### Update your routes/web.php file with the following code
 ```php
 <?php
 
@@ -174,9 +174,9 @@ Route::controller(TodosController::class)->prefix('todos')->name('todos.')->grou
 });
 ```
 
-# In resources/views Create a folder named Todos
-# Inside your Todos folder create a file named index.blade.php
-# After creating your index.blade.php file, update this file with the following code
+### In resources/views Create a folder named Todos
+### Inside your Todos folder create a file named index.blade.php
+### After creating your index.blade.php file, update this file with the following code
 ```php
 <!DOCTYPE html>
 <html lang="en">
@@ -392,7 +392,7 @@ Route::controller(TodosController::class)->prefix('todos')->name('todos.')->grou
 php artisan serve
 ```
 
-# Visit url 
+### Visit url 
 ```
 http://127.0.0.1:8000/todos/index
 ```
